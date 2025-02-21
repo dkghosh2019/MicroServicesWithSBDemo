@@ -1,0 +1,15 @@
+# Eureka Server port
+server.port=8761
+
+# Important: Eureka Server doesn't register with itself
+eureka.client.register-with-eureka=false
+# Important: Eureka Server doesn't fetch registry from itself
+eureka.client.fetch-registry=false
+
+# Optional: If you want to enable self-preservation mode (for resilience)
+eureka.server.enable-self-preservation=true
+# How often to evict expired instances
+eureka.server.eviction-interval-timer-in-ms=5000
+
+# The name of your Eureka Server application
+spring.application.name=service-registry

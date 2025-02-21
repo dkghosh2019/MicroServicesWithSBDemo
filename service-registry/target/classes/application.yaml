@@ -1,0 +1,17 @@
+server:
+  port: 8761
+
+spring:
+  application:
+    name: service-registry # Or a more descriptive name like eureka-server
+
+eureka:
+  client:
+    register-with-eureka: false # Correct placement
+    fetch-registry: false  # Correct placement
+  instance:
+    hostname: localhost # Or 127.0.0.1, or your server's actual hostname/IP.  Important!
+    # preferIpAddress: true # Optional: Sometimes useful, especially in cloud environments.
+  server: # Server-specific settings
+    enable-self-preservation: true # Highly recommended for production
+    eviction-interval-timer-in-ms: 5000 # How often to check for expired instances (adjust as needed)
